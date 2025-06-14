@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scraper
+  labels:
+    app: scraper
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scraper
+  template:
+    metadata:
+      labels:
+        app: scraper
+    spec:
+      containers:
+      - name: scraper
+        image: oumaimaboughdad/ecommerce_scraper:latest
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: data-volume
+          mountPath: /data
+      volumes:
+      - name: data-volume
+        persistentVolumeClaim:
+          claimName: ecommerce-data-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scraper-service
+spec:
+  selector:
+    app: scraper
+  ports:
+  - port: 80
+    targetPort: 80
+  type: ClusterIP

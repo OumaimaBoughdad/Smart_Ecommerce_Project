@@ -1,0 +1,20 @@
+{
+  "data_access": {
+    "product_data": true,
+    "user_data": false,
+    "pricing_data": true,
+    "inventory_data": true
+  },
+  "capabilities": {
+    "product_analysis": true,
+    "recommendation": true,
+    "user_profiling": false,
+    "price_optimization": true,
+    "inventory_prediction": true
+  },
+  "audit": {
+    "log_all_requests": true,
+    "store_decisions": true,
+    "retention_days": 90
+  }
+}

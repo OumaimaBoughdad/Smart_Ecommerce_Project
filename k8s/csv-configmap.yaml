@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: produits-scrapy-csv
+data:
+  produits_scrapy.csv: |
+    titre;prix;disponibilite;note_moyenne;description;vendeur;categorie;lien_produit;source_file;url,date_extraction,titre_bundle,description_bundle,vendeur,nombre_produits,nombre_images,prix_prix_trouve,prix_prix_nettoye;store_domain,product_id,title,handle,vendor,product_type,created_at,updated_at,published_at,tags,body_html,url,image_src,all_image_srcs,extracted_at,variants_count,variant_id,variant_title,sku,price,compare_at_price,available,variant_created_at,variant_updated_at,inventory_quantity,weight,grams
+    Aliexpress;;En stock;;;AliExpress Store;Produits Généraux;https://www.aliexpress.com/item/3256807907498713.html;aliexpress_products.csv;;
+    ;;;;;;;;bundle_deals_20250531_143745.csv;https://www.aliexpress.com/ssr/300000512/BundleDeals2?spm=a2g0o.home.3fornn.1.690c76dbv9m7Ge&disableNav=YES&pha_manifest=ssr&_immersiveMode=true&_gl=1*qd0kt6*_gcl_au*MTEyMDE0NDYwMy4xNzQ4Njk4NDEx*_ga*MTA0MTAzODg1ODE4ODIwMS4xNzQ4Njk4NDA1NDE0*_ga_VED1YSGNC7*czE3NDg2OTg0MTEkbzEkZzAkdDE3NDg2OTg0MTEkajYwJGwwJGgw&productIds=3256807907498713,2025-05-31T14:37:44.881275,Bundle Deals 2.0,,Vendeur non trouvé,0,25,$2.33,2.33;
+    $416.99;416.99;En stock;2.0;"15.6"", AMD E2-3800 1.3GHz, 4GB, 500GB, Windows 8.1";;Non spécifiée;https://webscraper.io/test-sites/e-commerce/static/product/31;merged_products.csv;;
+    $416.99;416.99;En stock;2.0;"15.6"", AMD E2-3800 1.3GHz, 4GB, 500GB, Windows 8.1";;Non spécifiée;https://webscraper.io/test-sites/e-commerce/static/product/31;merged_products.csv;;
+    $306.99;306.99;En stock;2.0;"15.6"", Pentium N3520 2.16GHz, 4GB, 500GB, Linux";;Non spécifiée;https://webscraper.io/test-sites/e-commerce/static/product/32;merged_products.csv;;
+    $306.99;306.99;En stock;2.0;"15.6"", Pentium N3520 2.16GHz, 4GB, 500GB, Linux";;Non spécifiée;https://webscraper.io/test-sites/e-commerce/static/product/32;merged_products.csv;;
+    $1178.99;1178.99;En stock;2.0;"15.6"", Core i5-4200M, 4GB, 500GB, Win7 Pro 64bit";;Non spécifiée;https://webscraper.io/test-sites/e-commerce/static/product/33;merged_products.csv;;
+    $1178.99;1178.99;En stock;2.0;"15.6"", Core i5-4200M, 4GB, 500GB, Win7 Pro 64bit";;Non spécifiée;https://webscraper.io/test-sites/e-commerce/static/product/33;merged_products.csv;;
+    $739.99;739.99;En stock;8.0;"14"", Core i5 2.6GHz, 4GB, 500GB, Win7 Pro 64bit";;Non spécifiée;https://webscraper.io/test-sites/e-commerce/static/product/34;merged_products.csv;;
+    $739.99;739.99;En stock;8.0;"14"", Core i5 2.6GHz, 4GB, 500GB, Win7 Pro 64bit";;Non spécifiée;https://webscraper.io/test-sites/e-commerce/static/product/34;merged_products.csv;;
+    $1311.99;1311.99;En stock;12.0;"12.5"", Core i5-4300U, 8GB, 240GB SSD, Win7 Pro 64bit";;Non spécifiée;https://webscraper.io/test-sites/e-commerce/static/product/35;merged_products.csv;;
+    $1311.99;1311.99;En stock;12.0;"12.5"", Core i5-4300U, 8GB, 240GB SSD, Win7 Pro 64bit";;Non spécifiée;https://webscraper.io/test-sites/e-commerce/static/product/35;merged_products.csv;;

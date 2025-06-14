@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: produits-scrapy-csv
+data:
+  produits_scrapy.csv: |
+    titre;prix;disponibilite;note_moyenne;description;vendeur;categorie;lien_produit;source_file
+    Laptop A;416.99;En stock;4.5;15.6" Laptop with 8GB RAM;Vendor A;Electronics;https://example.com/laptop-a;test_data.csv
+    Laptop B;306.99;En stock;3.8;14" Laptop with 4GB RAM;Vendor B;Electronics;https://example.com/laptop-b;test_data.csv
+    Laptop C;1178.99;En stock;4.9;17" Gaming Laptop;Vendor C;Electronics;https://example.com/laptop-c;test_data.csv
+    Smartphone A;739.99;En stock;4.7;6.5" Smartphone;Vendor D;Electronics;https://example.com/smartphone-a;test_data.csv
+    Smartphone B;1311.99;En stock;4.2;6.1" Smartphone;Vendor E;Electronics;https://example.com/smartphone-b;test_data.csv
+    Tablet A;581.99;En stock;4.0;10" Tablet;Vendor F;Electronics;https://example.com/tablet-a;test_data.csv
+    Tablet B;1033.99;En stock;4.3;12" Tablet;Vendor G;Electronics;https://example.com/tablet-b;test_data.csv
+    Monitor A;609.99;En stock;4.6;27" Monitor;Vendor H;Electronics;https://example.com/monitor-a;test_data.csv
+    Monitor B;745.99;En stock;4.1;32" Monitor;Vendor I;Electronics;https://example.com/monitor-b;test_data.csv
+    Keyboard;129.99;En stock;4.8;Mechanical Keyboard;Vendor J;Electronics;https://example.com/keyboard;test_data.csv

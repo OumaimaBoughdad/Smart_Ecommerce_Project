@@ -1,0 +1,143 @@
+2025-06-12 23:59:53,010 - INFO - Debut scraping multi-sites - Objectif: 800 produits
+2025-06-12 23:59:53,010 - INFO - 
+============================================================
+2025-06-12 23:59:53,011 - INFO - SITE: books_demo
+2025-06-12 23:59:53,011 - INFO - URL de base: http://books.toscrape.com
+2025-06-12 23:59:53,011 - INFO - Debut scraping: books_demo - travel
+2025-06-12 23:59:53,012 - INFO - Page 1 - books_demo/travel: http://books.toscrape.com/catalogue/category/books/travel_2/index.html
+2025-06-12 23:59:56,968 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-06-12 23:59:56,971 - WARNING - Aucun produit trouve avec 'article.product_pod, li' sur: http://books.toscrape.com/catalogue/category/books/travel_2/index.html
+2025-06-12 23:59:56,972 - WARNING - Aucun produit trouve sur: http://books.toscrape.com/catalogue/category/books/travel_2/index.html
+2025-06-12 23:59:56,973 - INFO - books_demo/travel termine: 0 produits
+2025-06-13 00:00:00,270 - INFO - Debut scraping: books_demo - mystery
+2025-06-13 00:00:00,271 - INFO - Page 1 - books_demo/mystery: http://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+2025-06-13 00:00:00,860 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-06-13 00:00:00,861 - WARNING - Aucun produit trouve avec 'article.product_pod, li' sur: http://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+2025-06-13 00:00:00,862 - WARNING - Aucun produit trouve sur: http://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+2025-06-13 00:00:00,862 - INFO - books_demo/mystery termine: 0 produits
+2025-06-13 00:00:03,420 - INFO - Debut scraping: books_demo - history
+2025-06-13 00:00:03,422 - INFO - Page 1 - books_demo/history: http://books.toscrape.com/catalogue/category/books/history_32/index.html
+2025-06-13 00:00:03,973 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-06-13 00:00:03,974 - WARNING - Aucun produit trouve avec 'article.product_pod, li' sur: http://books.toscrape.com/catalogue/category/books/history_32/index.html
+2025-06-13 00:00:03,975 - WARNING - Aucun produit trouve sur: http://books.toscrape.com/catalogue/category/books/history_32/index.html
+2025-06-13 00:00:03,976 - INFO - books_demo/history termine: 0 produits
+2025-06-13 00:00:06,765 - INFO - Debut scraping: books_demo - romance
+2025-06-13 00:00:06,765 - INFO - Page 1 - books_demo/romance: http://books.toscrape.com/catalogue/category/books/romance_8/index.html
+2025-06-13 00:00:07,347 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-06-13 00:00:07,348 - WARNING - Aucun produit trouve avec 'article.product_pod, li' sur: http://books.toscrape.com/catalogue/category/books/romance_8/index.html
+2025-06-13 00:00:07,348 - WARNING - Aucun produit trouve sur: http://books.toscrape.com/catalogue/category/books/romance_8/index.html
+2025-06-13 00:00:07,348 - INFO - books_demo/romance termine: 0 produits
+2025-06-13 00:00:10,264 - INFO - Debut scraping: books_demo - science
+2025-06-13 00:00:10,264 - INFO - Page 1 - books_demo/science: http://books.toscrape.com/catalogue/category/books/science_22/index.html
+2025-06-13 00:00:10,818 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-06-13 00:00:10,820 - WARNING - Aucun produit trouve avec 'article.product_pod, li' sur: http://books.toscrape.com/catalogue/category/books/science_22/index.html
+2025-06-13 00:00:10,827 - WARNING - Aucun produit trouve sur: http://books.toscrape.com/catalogue/category/books/science_22/index.html
+2025-06-13 00:00:10,828 - INFO - books_demo/science termine: 0 produits
+2025-06-13 00:00:14,166 - INFO - Debut scraping: books_demo - fiction
+2025-06-13 00:00:14,166 - INFO - Page 1 - books_demo/fiction: http://books.toscrape.com/catalogue/category/books/fiction_10/index.html
+2025-06-13 00:00:14,755 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-06-13 00:00:14,757 - WARNING - Aucun produit trouve avec 'article.product_pod, li' sur: http://books.toscrape.com/catalogue/category/books/fiction_10/index.html
+2025-06-13 00:00:14,758 - WARNING - Aucun produit trouve sur: http://books.toscrape.com/catalogue/category/books/fiction_10/index.html
+2025-06-13 00:00:14,759 - INFO - books_demo/fiction termine: 0 produits
+2025-06-13 00:00:18,440 - INFO - Debut scraping: books_demo - philosophy
+2025-06-13 00:00:18,440 - INFO - Page 1 - books_demo/philosophy: http://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+2025-06-13 00:00:19,005 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-06-13 00:00:19,007 - WARNING - Aucun produit trouve avec 'article.product_pod, li' sur: http://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+2025-06-13 00:00:19,008 - WARNING - Aucun produit trouve sur: http://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+2025-06-13 00:00:19,009 - INFO - books_demo/philosophy termine: 0 produits
+2025-06-13 00:00:22,942 - INFO - Debut scraping: books_demo - business
+2025-06-13 00:00:22,942 - INFO - Page 1 - books_demo/business: http://books.toscrape.com/catalogue/category/books/business_35/index.html
+2025-06-13 00:00:23,491 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-06-13 00:00:23,493 - WARNING - Aucun produit trouve avec 'article.product_pod, li' sur: http://books.toscrape.com/catalogue/category/books/business_35/index.html
+2025-06-13 00:00:23,494 - WARNING - Aucun produit trouve sur: http://books.toscrape.com/catalogue/category/books/business_35/index.html
+2025-06-13 00:00:23,495 - INFO - books_demo/business termine: 0 produits
+2025-06-13 00:00:25,691 - INFO - Debut scraping: books_demo - health
+2025-06-13 00:00:25,692 - INFO - Page 1 - books_demo/health: http://books.toscrape.com/catalogue/category/books/health_47/index.html
+2025-06-13 00:00:26,046 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-06-13 00:00:26,046 - WARNING - Aucun produit trouve avec 'article.product_pod, li' sur: http://books.toscrape.com/catalogue/category/books/health_47/index.html
+2025-06-13 00:00:26,046 - WARNING - Aucun produit trouve sur: http://books.toscrape.com/catalogue/category/books/health_47/index.html
+2025-06-13 00:00:26,047 - INFO - books_demo/health termine: 0 produits
+2025-06-13 00:00:29,258 - INFO - Debut scraping: books_demo - sports
+2025-06-13 00:00:29,258 - INFO - Page 1 - books_demo/sports: http://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html
+2025-06-13 00:00:29,655 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-06-13 00:00:29,656 - WARNING - Aucun produit trouve avec 'article.product_pod, li' sur: http://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html
+2025-06-13 00:00:29,657 - WARNING - Aucun produit trouve sur: http://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html
+2025-06-13 00:00:29,657 - INFO - books_demo/sports termine: 0 produits
+2025-06-13 00:00:32,499 - INFO - 
+============================================================
+2025-06-13 00:00:32,499 - INFO - SITE: webscraper_varied
+2025-06-13 00:00:32,499 - INFO - URL de base: https://webscraper.io/test-sites/e-commerce
+2025-06-13 00:00:32,499 - INFO - Debut scraping: webscraper_varied - static_all
+2025-06-13 00:00:32,500 - INFO - Page 1 - webscraper_varied/static_all: https://webscraper.io/test-sites/e-commerce/static
+2025-06-13 00:00:33,428 - INFO - Trouve 3 elements
+2025-06-13 00:00:33,434 - INFO - webscraper_varied/static_all termine: 3 produits
+2025-06-13 00:00:33,436 - INFO - Total actuel: 3 produits
+2025-06-13 00:00:36,273 - INFO - Debut scraping: webscraper_varied - ajax_all
+2025-06-13 00:00:36,274 - INFO - Page 1 - webscraper_varied/ajax_all: https://webscraper.io/test-sites/e-commerce/ajax
+2025-06-13 00:00:37,069 - INFO - Trouve 3 elements
+2025-06-13 00:00:37,075 - INFO - webscraper_varied/ajax_all termine: 3 produits
+2025-06-13 00:00:37,077 - INFO - Total actuel: 6 produits
+2025-06-13 00:00:39,240 - INFO - Debut scraping: webscraper_varied - more_all
+2025-06-13 00:00:39,240 - INFO - Page 1 - webscraper_varied/more_all: https://webscraper.io/test-sites/e-commerce/more
+2025-06-13 00:00:40,082 - INFO - Trouve 3 elements
+2025-06-13 00:00:40,090 - INFO - webscraper_varied/more_all termine: 3 produits
+2025-06-13 00:00:40,092 - INFO - Total actuel: 9 produits
+2025-06-13 00:00:43,363 - INFO - Debut scraping: webscraper_varied - allinone_all
+2025-06-13 00:00:43,363 - INFO - Page 1 - webscraper_varied/allinone_all: https://webscraper.io/test-sites/e-commerce/allinone
+2025-06-13 00:00:44,157 - INFO - Trouve 3 elements
+2025-06-13 00:00:44,162 - INFO - webscraper_varied/allinone_all termine: 3 produits
+2025-06-13 00:00:44,163 - INFO - Total actuel: 12 produits
+2025-06-13 00:00:47,245 - INFO - Debut scraping: webscraper_varied - scroll_all
+2025-06-13 00:00:47,246 - INFO - Page 1 - webscraper_varied/scroll_all: https://webscraper.io/test-sites/e-commerce/scroll
+2025-06-13 00:00:48,047 - INFO - Trouve 3 elements
+2025-06-13 00:00:48,056 - INFO - webscraper_varied/scroll_all termine: 3 produits
+2025-06-13 00:00:48,059 - INFO - Total actuel: 15 produits
+2025-06-13 00:00:51,239 - INFO - Debut scraping: webscraper_varied - static_computers
+2025-06-13 00:00:51,239 - INFO - Page 1 - webscraper_varied/static_computers: https://webscraper.io/test-sites/e-commerce/static/computers
+2025-06-13 00:00:52,012 - INFO - Trouve 3 elements
+2025-06-13 00:00:52,018 - INFO - webscraper_varied/static_computers termine: 3 produits
+2025-06-13 00:00:52,021 - INFO - Total actuel: 18 produits
+2025-06-13 00:00:54,343 - INFO - Debut scraping: webscraper_varied - ajax_computers
+2025-06-13 00:00:54,345 - INFO - Page 1 - webscraper_varied/ajax_computers: https://webscraper.io/test-sites/e-commerce/ajax/computers
+2025-06-13 00:00:55,400 - INFO - Trouve 3 elements
+2025-06-13 00:00:55,407 - INFO - webscraper_varied/ajax_computers termine: 3 produits
+2025-06-13 00:00:55,408 - INFO - Total actuel: 21 produits
+2025-06-13 00:00:58,863 - INFO - Debut scraping: webscraper_varied - static_phones
+2025-06-13 00:00:58,865 - INFO - Page 1 - webscraper_varied/static_phones: https://webscraper.io/test-sites/e-commerce/static/phones
+2025-06-13 00:00:59,709 - INFO - Trouve 3 elements
+2025-06-13 00:00:59,727 - INFO - webscraper_varied/static_phones termine: 3 produits
+2025-06-13 00:00:59,732 - INFO - Total actuel: 24 produits
+2025-06-13 00:01:03,093 - INFO - Debut scraping: webscraper_varied - ajax_phones
+2025-06-13 00:01:03,093 - INFO - Page 1 - webscraper_varied/ajax_phones: https://webscraper.io/test-sites/e-commerce/ajax/phones
+2025-06-13 00:01:03,887 - INFO - Trouve 3 elements
+2025-06-13 00:01:03,893 - INFO - webscraper_varied/ajax_phones termine: 3 produits
+2025-06-13 00:01:03,896 - INFO - Total actuel: 27 produits
+2025-06-13 00:01:07,029 - INFO - Debut scraping: webscraper_varied - static_clothes
+2025-06-13 00:01:07,029 - INFO - Page 1 - webscraper_varied/static_clothes: https://webscraper.io/test-sites/e-commerce/static/clothes
+2025-06-13 00:01:07,674 - WARNING - Aucun produit trouve avec '.thumbnail, .card, .product-item' sur: https://webscraper.io/test-sites/e-commerce/static/clothes
+2025-06-13 00:01:07,677 - INFO - Trouve avec selecteur alternatif 'li'
+2025-06-13 00:01:07,677 - INFO - Trouve 38 elements
+2025-06-13 00:01:07,692 - INFO - webscraper_varied/static_clothes termine: 34 produits
+2025-06-13 00:01:07,694 - INFO - Total actuel: 61 produits
+2025-06-13 00:01:09,875 - INFO - 
+============================================================
+2025-06-13 00:01:09,875 - INFO - SITE: jsonplaceholder
+2025-06-13 00:01:09,875 - INFO - URL de base: https://jsonplaceholder.typicode.com
+2025-06-13 00:01:09,876 - INFO - Debut scraping: jsonplaceholder - posts
+2025-06-13 00:01:09,876 - INFO - Page 1 - jsonplaceholder/posts: https://jsonplaceholder.typicode.com/posts
+2025-06-13 00:01:10,445 - INFO - Trouve 100 elements JSON
+2025-06-13 00:01:10,445 - INFO - jsonplaceholder/posts termine: 100 produits
+2025-06-13 00:01:10,448 - INFO - Total actuel: 161 produits
+2025-06-13 00:01:14,289 - INFO - Debut scraping: jsonplaceholder - albums
+2025-06-13 00:01:14,289 - INFO - Page 1 - jsonplaceholder/albums: https://jsonplaceholder.typicode.com/albums
+2025-06-13 00:01:14,839 - INFO - Trouve 100 elements JSON
+2025-06-13 00:01:14,840 - INFO - jsonplaceholder/albums termine: 100 produits
+2025-06-13 00:01:14,841 - INFO - Total actuel: 261 produits
+2025-06-13 00:01:17,342 - INFO - Debut scraping: jsonplaceholder - photos
+2025-06-13 00:01:17,342 - INFO - Page 1 - jsonplaceholder/photos: https://jsonplaceholder.typicode.com/photos
+2025-06-13 00:01:18,491 - INFO - Trouve 5000 elements JSON
+2025-06-13 00:01:18,491 - INFO - jsonplaceholder/photos termine: 5000 produits
+2025-06-13 00:01:18,493 - INFO - Total actuel: 5261 produits
+2025-06-13 00:01:22,385 - INFO - 
+Scraping termine! Total: 5261 produits
+2025-06-13 00:01:22,421 - INFO - Donnees sauvegardees dans products_diverse_final.csv

@@ -1,0 +1,26 @@
+2025-06-12 00:29:29,691 - MCP_SERVER_analysis_server - INFO - Outil enregistré: data_analysis
+2025-06-12 00:29:29,692 - MCP_HOST_main_host - INFO - Serveur créé: analysis_server
+2025-06-12 00:29:29,693 - MCP_HOST_main_host - INFO - Client créé: analyst_client pour utilisateur analyst
+2025-06-12 00:29:29,693 - MCP_HOST_main_host - INFO - Client créé: admin_client pour utilisateur admin
+2025-06-12 00:29:29,694 - MCP_HOST_main_host - INFO - Client créé: default_client pour utilisateur default_user
+2025-06-12 00:29:29,694 - MCP_CLIENT_analyst_client - INFO - Connecté au serveur analysis_server
+2025-06-12 00:29:29,696 - MCP_CLIENT_admin_client - INFO - Connecté au serveur analysis_server
+2025-06-12 00:29:29,696 - MCP_CLIENT_default_client - INFO - Connecté au serveur analysis_server
+2025-06-12 00:29:29,720 - MCP_AUDIT - INFO - Requête MCP enregistrée: c31a41b1-1d65-425f-a3de-f91ee2fb631a
+2025-06-12 00:29:29,721 - MCP_SERVER_analysis_server - INFO - Traitement de la requête c31a41b1-1d65-425f-a3de-f91ee2fb631a
+2025-06-12 00:29:29,766 - MCP_AUDIT - INFO - Requête MCP enregistrée: c31a41b1-1d65-425f-a3de-f91ee2fb631a
+2025-06-12 00:29:29,777 - MCP_AUDIT - INFO - Requête MCP enregistrée: 975b3d13-c08b-4da7-a50c-50a7e431055f
+2025-06-12 00:29:29,777 - MCP_SERVER_analysis_server - INFO - Traitement de la requête 975b3d13-c08b-4da7-a50c-50a7e431055f
+2025-06-12 00:29:29,788 - MCP_AUDIT - INFO - Requête MCP enregistrée: 975b3d13-c08b-4da7-a50c-50a7e431055f
+2025-06-12 00:29:29,799 - MCP_AUDIT - INFO - Requête MCP enregistrée: 82cc1bf0-a607-4381-a84b-23cb26465bbc
+2025-06-12 00:29:29,799 - MCP_SERVER_analysis_server - INFO - Traitement de la requête 82cc1bf0-a607-4381-a84b-23cb26465bbc
+2025-06-12 00:29:29,806 - MCP_AUDIT - INFO - Requête MCP enregistrée: 82cc1bf0-a607-4381-a84b-23cb26465bbc
+2025-06-12 00:29:29,819 - MCP_AUDIT - INFO - Requête MCP enregistrée: 11e84b91-204d-4131-9c5c-2b14ce90072a
+2025-06-12 00:29:29,820 - MCP_SERVER_analysis_server - INFO - Traitement de la requête 11e84b91-204d-4131-9c5c-2b14ce90072a
+2025-06-12 00:29:29,833 - MCP_AUDIT - INFO - Requête MCP enregistrée: 11e84b91-204d-4131-9c5c-2b14ce90072a
+2025-06-12 00:29:29,844 - MCP_AUDIT - INFO - Requête MCP enregistrée: 292b79cc-2efc-4d49-910f-391240f4b835
+2025-06-12 00:29:29,845 - MCP_SERVER_analysis_server - INFO - Traitement de la requête 292b79cc-2efc-4d49-910f-391240f4b835
+2025-06-12 00:29:29,852 - MCP_AUDIT - INFO - Requête MCP enregistrée: 292b79cc-2efc-4d49-910f-391240f4b835
+2025-06-12 00:29:29,862 - MCP_AUDIT - INFO - Requête MCP enregistrée: 7cf9f6d2-1c1f-4cc8-b854-e89d7556b706
+2025-06-12 00:29:29,862 - MCP_SERVER_analysis_server - INFO - Traitement de la requête 7cf9f6d2-1c1f-4cc8-b854-e89d7556b706
+2025-06-12 00:29:29,869 - MCP_AUDIT - INFO - Requête MCP enregistrée: 7cf9f6d2-1c1f-4cc8-b854-e89d7556b706

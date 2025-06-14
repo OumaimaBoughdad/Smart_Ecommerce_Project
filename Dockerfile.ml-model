@@ -1,0 +1,10 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY Analyse-et-s-lection-des-Top-K-produits/fixed_model_training.py /app/model_training.py
+COPY Analyse-et-s-lection-des-Top-K-produits/requirements.txt /app/requirements.txt
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+CMD ["python", "model_training.py"]

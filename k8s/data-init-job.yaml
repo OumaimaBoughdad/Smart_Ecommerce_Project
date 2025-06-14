@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: data-init-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: data-init
+        image: busybox
+        command: ["sh", "-c"]
+        args:
+        - |
+          mkdir -p /data/output
+          echo "Waiting for data directory to be ready..."
+          sleep 5
+          echo "Copying CSV file to persistent volume..."
+          cat > /data/produits_scrapy.csv << 'EOF'
+          # The content of the CSV file will be added here
+          EOF
+          echo "Data initialization complete!"
+        volumeMounts:
+        - name: data-volume
+          mountPath: /data
+      restartPolicy: Never
+      volumes:
+      - name: data-volume
+        persistentVolumeClaim:
+          claimName: ecommerce-data-pvc
+  backoffLimit: 2

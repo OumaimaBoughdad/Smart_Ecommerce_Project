@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mcp-server
+  labels:
+    app: mcp-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mcp-server
+  template:
+    metadata:
+      labels:
+        app: mcp-server
+    spec:
+      volumes:
+      - name: data-volume
+        persistentVolumeClaim:
+          claimName: ecommerce-data-pvc
+      containers:
+      - name: mcp-server
+        image: oumaimaboughdad/ecommerce_mcp:latest
+        ports:
+        - containerPort: 8000
+        volumeMounts:
+        - name: data-volume
+          mountPath: /app/data
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mcp-service
+spec:
+  selector:
+    app: mcp-server
+  ports:
+  - port: 8000
+    targetPort: 8000
+  type: ClusterIP
