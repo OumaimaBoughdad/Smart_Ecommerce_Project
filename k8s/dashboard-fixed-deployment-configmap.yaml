@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard
+  labels:
+    app: dashboard
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dashboard
+  template:
+    metadata:
+      labels:
+        app: dashboard
+    spec:
+      containers:
+      - name: dashboard
+        image: oumaimaboughdad/ecommerce_llm:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8501
+        volumeMounts:
+        - name: data-volume
+          mountPath: /app/data
+        - name: app-config
+          mountPath: /app/app_streamlit.py
+          subPath: app_streamlit.py
+      volumes:
+      - name: data-volume
+        persistentVolumeClaim:
+          claimName: ecommerce-data-pvc
+      - name: app-config
+        configMap:
+          name: dashboard-app-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dashboard-service
+spec:
+  selector:
+    app: dashboard
+  ports:
+  - port: 8501
+    targetPort: 8501
+  type: NodePort

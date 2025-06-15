@@ -1,0 +1,7 @@
+FROM oumaimaboughdad/ecommerce_llm:latest
+
+# Update Streamlit to a version that supports chat_message
+RUN pip install --upgrade streamlit>=1.20.0
+
+# Keep the original entrypoint
+ENTRYPOINT ["streamlit", "run", "/app/app_streamlit.py", "--server.port=8501", "--server.address=0.0.0.0"]

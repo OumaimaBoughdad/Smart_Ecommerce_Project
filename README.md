@@ -1,71 +1,57 @@
-# F1 Project: E-commerce Data Analysis Pipeline
+# E-commerce Analytics Platform
 
-## Project Overview
-This project implements a complete data pipeline for e-commerce product analysis, from web scraping to advanced analytics and responsible AI integration. The pipeline consists of four main components that work together to extract, process, analyze, and present insights from e-commerce product data.
+This project deploys a complete e-commerce analytics platform using Kubernetes, consisting of three main components:
+
+1. **Web Scraper** - Collects product data from various e-commerce websites
+2. **ML Model** - Processes the collected data and generates insights
+3. **Dashboard** - Visualizes the insights for business users
+
+## Architecture
+
+The system uses Kubernetes Jobs for one-time tasks (scraper and ML model) and a Deployment for the long-running dashboard service.
 
 ## Components
 
-### 1. Agent Scraping
-A flexible web scraping system that extracts product data from multiple e-commerce websites across different categories (books, electronics, clothing, etc.). The scraper collects product details including title, price, availability, rating, and more.
+- **PersistentVolumeClaim (PVC)**: Shared storage for all components
+- **ConfigMap**: Contains sample product data
+- **Scraper Job**: Collects product data from websites
+- **ML Model Job**: Processes data and generates insights
+- **Dashboard Deployment**: Visualizes insights for users
 
-**Key Features:**
-- Multi-category and multi-website support
-- Flexible CSS selectors for adaptability
-- Error handling and logging
-- Statistics generation
+## How to Deploy
 
-### 2. Analyse et Sélection des Top-K Produits
-A data analysis module that processes the scraped product data to identify the most attractive products based on multiple criteria. This component uses advanced statistical techniques to rank and select the top products.
+Apply the complete solution:
 
-**Key Features:**
-- Data cleaning and preprocessing
-- Feature normalization and scoring
-- Advanced analytics (PCA, K-Means clustering)
-- Predictive modeling with Random Forest
-- Visualization of product rankings
+```bash
+kubectl apply -f k8s/complete-solution.yaml
+```
 
-### 3. LLM pour Enrichissement et Synthèse
-A module that leverages Large Language Models (LLMs) to enrich the analysis with strategic insights and recommendations. This component uses Chain of Thought (CoT) reasoning to provide structured analysis and actionable recommendations.
+Or deploy components individually:
 
-**Key Features:**
-- Chain of Thought analysis framework
-- Interactive Streamlit interface
-- Data visualization with Plotly
-- Strategic recommendations for pricing, inventory, and marketing
-- Export of reasoning traces for transparency
+```bash
+kubectl apply -f k8s/pvc.yaml
+kubectl apply -f k8s/fixed-csv-configmap.yaml
+kubectl apply -f k8s/scraper-job.yaml
+kubectl apply -f k8s/ml-model-job.yaml
+kubectl apply -f k8s/dashboard-deployment.yaml
+```
 
-### 4. Architecture Responsable avec Model Context Protocol
-A security and ethics framework that implements the Model Context Protocol (MCP) to ensure responsible AI usage. This component provides traceability, permission management, and operation isolation for the entire pipeline.
+## Accessing the Dashboard
 
-**Key Features:**
-- Complete request logging in SQLite database
-- Permission management with different access levels
-- Modular architecture with MCP components
-- Audit capabilities
+The dashboard is exposed as a NodePort service. Access it at:
 
-## Technologies Used
-- **Python**: Core programming language
-- **Pandas/NumPy**: Data manipulation and analysis
-- **Scikit-learn**: Machine learning algorithms
-- **Transformers (Hugging Face)**: LLM integration
-- **Streamlit**: Interactive user interface
-- **Plotly**: Data visualization
-- **SQLite**: Audit logging
+```
+http://<node-ip>:<node-port>
+```
 
-## Getting Started
-Each component has its own README file with specific installation and usage instructions. Please refer to the individual component directories for detailed information:
+Find the node port with:
 
-- [Agent Scraping](./agent_scraping/README.md)
-- [Analyse et Sélection des Top-K Produits](./Analyse-et-s-lection-des-Top-K-produits/README.md)
-- [LLM pour Enrichissement et Synthèse](./LLM_pour_enrichissement-et-synthese/README.md)
-- [Architecture Responsable avec Model Context Protocol](./Architecture_responsable_avec_Model_Context_Protocol-/README.md)
+```bash
+kubectl get svc dashboard-service
+```
 
-## Project Workflow
-1. **Data Collection**: Web scraping of e-commerce products
-2. **Data Processing**: Cleaning, normalization, and scoring
-3. **Advanced Analysis**: Selection of top products using statistical methods
-4. **LLM Enhancement**: Enrichment with AI-powered insights and recommendations
-5. **Responsible Deployment**: Implementation of security and ethics framework
+## Troubleshooting
 
-## License
-Each component includes its own LICENSE file. Please refer to these files for licensing information.
+If pods show CrashLoopBackOff:
+- For scraper and ML model: This is expected as they're designed to run once and complete. Use Jobs instead of Deployments.
+- For dashboard: Check logs with `kubectl logs deployment/dashboard`
