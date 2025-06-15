@@ -49,3 +49,38 @@ jobs:
           context: ./LLM_pour_enrichissement-et-synthese
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ecommerce-dashboard:latest
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.deploy == 'true'
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v1
+        
+      - name: Create kubeconfig
+        run: |
+          mkdir -p $HOME/.kube
+          echo "${{ secrets.KUBE_CONFIG_DATA }}" | base64 -d > $HOME/.kube/config
+          chmod 600 $HOME/.kube/config
+          
+      - name: Deploy ConfigMap
+        run: kubectl apply -f k8s/csv-configmap.yaml
+        
+      - name: Deploy PVC
+        run: kubectl apply -f k8s/pvc.yaml
+        
+      - name: Deploy ML Model Job
+        run: kubectl apply -f k8s/ml-model-job.yaml
+        
+      - name: Wait for ML Model Job to complete
+        run: |
+          echo "Waiting for ML model job to complete..."
+          kubectl wait --for=condition=complete job/ml-model-job --timeout=300s
+        
+      - name: Deploy Dashboard
+        run: |
+          kubectl apply -f k8s/dashboard-deployment.yaml
+          kubectl apply -f k8s/dashboard-service.yaml
