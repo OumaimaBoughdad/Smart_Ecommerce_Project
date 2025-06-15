@@ -1,0 +1,89 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    # Manual trigger option
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+          if [ -f agent_scraping/requirements.txt ]; then pip install -r agent_scraping/requirements.txt; fi
+          if [ -f Analyse-et-s-lection-des-Top-K-produits/requirements.txt ]; then pip install -r Analyse-et-s-lection-des-Top-K-produits/requirements.txt; fi
+          if [ -f LLM_pour_enrichissement-et-synthese/requirements.txt ]; then pip install -r LLM_pour_enrichissement-et-synthese/requirements.txt; fi
+      - name: Test with pytest
+        run: |
+          pytest
+
+  build-and-push:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+      
+      - name: Build and push scraper image
+        uses: docker/build-push-action@v2
+        with:
+          context: ./agent_scraping
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ecommerce-scraper:latest
+      
+      - name: Build and push ML model image
+        uses: docker/build-push-action@v2
+        with:
+          context: ./Analyse-et-s-lection-des-Top-K-produits
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ecommerce-ml:latest,  ${{ secrets.DOCKER_HUB_USERNAME }}/ecommerce-ml:fixed
+      
+      - name: Build and push dashboard image
+        uses: docker/build-push-action@v2
+        with:
+          context: ./LLM_pour_enrichissement-et-synthese
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ecommerce-dashboard:latest
+          
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v1
+        
+      - name: Configure kubectl
+        run: |
+          mkdir -p $HOME/.kube
+          echo "${{ secrets.KUBE_CONFIG }}" > $HOME/.kube/config
+          chmod 600 $HOME/.kube/config
+          
+      - name: Deploy ConfigMap
+        run: kubectl apply -f k8s/csv-configmap.yaml
+        
+      - name: Deploy PVC
+        run: kubectl apply -f k8s/pvc.yaml
+        
+      - name: Deploy ML Model
+        run: kubectl apply -f k8s/ml-model-deployment-fixed-image.yaml
+        
+      - name: Deploy Dashboard
+        run: kubectl apply -f k8s/dashboard-deployment.yaml
