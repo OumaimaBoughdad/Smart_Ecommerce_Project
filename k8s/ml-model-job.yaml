@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ml-model
 spec:
-  ttlSecondsAfterFinished: 100
+  backoffLimit: 4
   template:
     metadata:
       labels:
@@ -45,4 +45,4 @@ spec:
         volumeMounts:
         - name: data-volume
           mountPath: /data
-      restartPolicy: OnFailure
+      restartPolicy: Never
